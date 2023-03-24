@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Projet JavaScript</title>
+</head>
+<body>
+    <section class="header-section">
+    <div class="Container">
+        <header class="navbar">
+            <div class="logo">
+                <img src="img/G.jpg" alt="">
+            </div>
+            <nav>
+                
+                <!-- Pagne des produites -->
+                <div class="cart">
+                    <span class="cart-icon">
+                      <img src="img/cart.png" alt="Cart icon" width="26px">
+                      <span class="cart-qty"></span>
+                    </span>
+                    <div class="cart-content"></div>
+                    <span class="cart-total"></span>
+                    <button class="cart-validate">Valider</button>
+                  </div>     
+                  
+
+                  <div class="container">
+                    <div class="order-form hidden">
+                      
+                      <form id="formulaire">
+                        <h2>Formulaire de commande</h2>
+                        <div>
+                          <label for="nom">Nom :</label>
+                          <input type="text" id="nom" name="nom" required>
+                        </div>
+                        <div>
+                          <label for="prenom">Prénom :</label>
+                          <input type="text" id="prenom" name="prenom" required>
+                        </div>
+                        <div>
+                          <label for="adresse">Adresse :</label>
+                          <input type="text" id="adresse" name="adresse" required>
+                        </div>
+                        <div>
+                          <label for="date">Date :</label>
+                          <input type="date" id="date" name="date" required>
+                        </div>
+                        <button id="commander-button" type="submit">Commander</button>
+                      </form>
+                    </div>
+                    <div class="invoice hidden">
+                      <h2>FACTURE</h2>
+                      <div class="info"></div>
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>Libellé</th>
+                            <th>Prix</th>
+                          </tr>
+                        </thead>
+                        <tbody></tbody>
+                        <tfoot>
+                          <tr>
+                            <td>Total</td>
+                            <td id="total"></td>
+                          </tr>
+                        </tfoot>
+                      </table>
+                    </div>      
+                  </div>
+                  
+                  
+                        
+            </nav>
+        </header>
+
+        <div style="text-align: center;">
+            <div class="wrapper">
+                <div class="static-txt">AVEC G-TECH</div>
+                <ul class="dynamic-txts">
+                    <li><span>Commandez</span></li>
+                    <li><span>Achetez</span></li>
+                    <li><span>Livrez</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Banier bublicitaire 1 avec animation  -->
+<section class="header-bannier">
+    <div class="bannier">
+        <img src="img/Bannier Web-Récupéré.gif" alt="">
+    </div>
+</section>
+
+ <section class="Categories">
+  <div class="container">
+    <h2>TOUS LES CATEGORIES SONT DISPONIBLE</h2>
+    <div class="row">
+        <div class="col-3">
+            <img src="img/JBL.jpg" alt="">
+        </div>
+        <div class="col-3">
+            <img src="img/WATCH BANNIER.png" alt="">
+        </div>
+        <div class="col-3">
+            <img src="img/gamer.jpg" alt="">
+        </div>
+    </div>
+  </div>
+ </section>
+
+
+ <section class="featured-products">
+    <div class="container">
+    <h2>IPHONE</h2>
+    <div class="row">
+        <div class="col-4">
+            <img src="img/iphone 1.jpeg" alt="">
+            <h3 id="libelle">Iphone 12 pro Max</h3>
+            <button>Acheter</button>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa fa-star-half-stroke"></i>
+            </div>
+            <p id="prix">350000 fcfa</p>
+        </div>
+        <div class="col-4">
+            <img  src="img/iphone 2.jpg" alt="">
+            <h3 id="libelle">Iphone 14 pro</h3>
+            <button>Acheter</button>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <p id="prix">550000 fcfa</p>
+        </div>
+        <div class="col-4">
+            <img src="img/iphone 3.jpg" alt="">
+            <h3 id="libelle">Iphone 7 Gold</h3>
+            <button>Acheter</button>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <p id="prix">120000 fcfa</p>
+        </div>
+        <div class="col-4">
+            <img src="img/iphone 4.webp" alt="">
+            <h3 id="libelle">Iphone XS Max</h3>
+            <button>Acheter</button>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <p id="prix">200000 fcfa</p>
+        </div>
+    </div>
+    </div>
+ </section>
+
+
+ <section class="featured-products">
+    <div class="container">
+    <h2>SAMSUNG</h2>
+    <div class="row">
+        <div class="col-4">
+            <img src="img/samsung fold 4.png" alt="">
+            <h3 id="libelle">Samsung Galaxy Fold4</h3>
+            <button>Acheter</button>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa fa-star-half-stroke"></i>
+            </div>
+            <p id="prix">600000 fcfa</p>
+        </div>
+        <div class="col-4">
+            <img src="img/Samsung-Galaxy-A14-1.jpg" alt="">
+            <h3 id="libelle">Samsung Galaxy A14</h3>
+            <button>Acheter</button>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <p id="prix">85000 fcfa</p>
+        </div>
+        <div class="col-4">
+            <img src="img/Samsung-Galaxy-A23.jpeg" alt="">
+            <h3 id="libelle">Samsung Galaxy A23</h3>
+            <button>Acheter</button>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <p id="prix">110000 fcfa</p>
+        </div>
+        <div class="col-4">
+            <img src="img/galaxy-s21-5g-dual-sim-rose-256go.jpg" alt="">
+            <h3 id="libelle">Samsung Galaxy S21</h3>
+            <button>Acheter</button>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <p id="prix">230000 fcfa</p>
+        </div>
+    </div>
+    </div>
+ </section>
+
+ 
+ <section class="header-bannier">
+    <div class="bannier">
+        <img src="img/Bannier1.jpg" alt="">
+    </div>
+</section>
+
+ <section class="featured-products">
+    <div class="container">
+    <h1>CONSOLE DE JEUX VIDEOS</h1>
+    <div class="row">
+        <div class="col-4">
+            <img src="img/Microsoft-Xbox-Series-X.jpeg" alt="">
+            <h3 id="libelle">Xbox-Series-X</h3>
+            <button>Acheter</button>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa fa-star-half-stroke"></i>
+            </div>
+            <p id="prix">450000 fcfa</p>
+        </div>
+        <div class="col-4">
+            <img src="img/nintendo-switch-1598515028.jpg" alt="">
+            <h3 id="libelle">Nintendo Switch</h3>
+            <button>Acheter</button>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <p id="prix">220000 fcfa</p>
+        </div>
+        <div class="col-4">
+            <img src="img/console-de-jeux-sony-psp-e1008.webp" alt="">
+            <h3 id="libelle">Sony PSP 3000</h3>
+            <button>Acheter</button>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <p id="prix">30000 fcfa</p>
+        </div>
+        <div class="col-4">
+            <img src="img/sony-ps5-edition-digital.jpeg" alt="">
+            <h3 id="libelle">PS5 Edition</h3>
+            <button>Acheter</button>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <p id="prix">700000 fcfa</p>
+        </div>
+    </div>
+    </div>
+ </section>
+ 
+
+ <section class="featured-products">
+    <div class="container">
+    <h2>CASQUE</h2>
+    <div class="row">
+        <div class="col-4">
+            <img src="img/221214 - Futura - Casque Sony.jpg" alt="">
+            <h3 id="libelle">Casque Sony</h3>
+            <button>Acheter</button>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa fa-star-half-stroke"></i>
+            </div>
+            <p id="prix">25000 fcfa</p>
+        </div>
+        <div class="col-4">
+            <img src="img/casque 1.jpeg" alt="">
+            <h3 id="libelle">Casque Apple</h3>
+            <button>Acheter</button>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <p id="prix">50000 fcfa</p>
+        </div>
+        <div class="col-4">
+            <img src="img/casque 2.jpg" alt="">
+            <h3 id="libelle">Casque BEATS Studio 3</h3>
+            <button>Acheter</button>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <p id="prix">15000 fcfa</p>
+        </div>
+        <div class="col-4">
+            <img src="img/casque jbl.jpg" alt="">
+            <h3 id="libelle">Casque JBL </h3>
+            <button>Acheter</button>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <p id="prix">25000 fcfa</p>
+        </div>
+    </div>
+    </div>
+ </section>
+
+
+
+ <section class="featured-products">
+    <div class="container">
+    <h2>WATCH</h2>
+    <div class="row">
+        <div class="col-4">
+            <img src="img/watch 1.jpg" alt="">
+            <h3 id="libelle">APPLE WATCH</h3>
+            <button>Acheter</button>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa fa-star-half-stroke"></i>
+            </div>
+            <p id="prix">25000 fcfa</p>
+        </div>
+        <div class="col-4">
+            <img src="img/watch 2.jpg" alt="">
+            <h3 id="libelle">MI BAND WATCH</h3>
+            <button>Acheter</button>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <p id="prix">19000 fcfa</p>
+        </div>
+        <div class="col-4">
+            <img src="img/watch 3.jpeg" alt="">
+            <h3 id="libelle">APPLE WATCH</h3>
+            <button>Acheter</button>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <p id="prix">27000 fcfa</p>
+        </div>
+        <div class="col-4">
+            <img src="img/watch 4.webp" alt="">
+            <h3 id="libelle">MI BAND</h3>
+            <button>Acheter</button>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <p id="prix">12000 fcfa</p>
+        </div>
+    </div>
+    </div>
+ </section>
+
+
+ <section class="header-bannier">
+    <div class="bannier">
+        <img src="img/Bannier1.jpg" alt="">
+    </div>
+</section>
+
+ <section class="featured-products">
+    <div class="container">
+    <h2>ORDINATEUR</h2>
+    <div class="row">
+        <div class="col-4">
+            <img src="img/acer gamer.jpg" alt="">
+            <h3 id="libelle">ACER GAMER</h3>
+            <button>Acheter</button>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa fa-star-half-stroke"></i>
+            </div>
+            <p id="prix">720000 fcfa</p>
+        </div>
+        <div class="col-4">
+            <img src="img/Asus rog 2021.jpeg" alt="">
+            <h3 id="libelle">ASUS ROG 2021</h3>
+            <button>Acheter</button>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <p id="prix">990000 fcfa</p>
+        </div>
+        <div class="col-4">
+            <img src="img/dell XPS 15.jpeg" alt="">
+            <h3 id="libelle">DELL XPS 15</h3>
+            <button>Acheter</button>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <p id="prix">730000 fcfa</p>
+        </div>
+        <div class="col-4">
+            <img src="img/hp 17.webp" alt="">
+            <h3 id="libelle">HP 17</h3>
+            <button>Acheter</button>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <p id="prix">350000 fcfa</p>
+        </div>
+    </div>
+    </div>
+ </section>
+
+ <footer class="footer">
+    <div class="container-a">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Compagnie</h4>
+                <ul>
+                    <li><a href="#">Qui Sommes-Nous</a></li>
+                    <li><a href="#">Nos Services</a></li>
+                    <li><a href="#">Politique De Confidentialité</a></li>
+                    <li><a href="#">Programme Affiliat</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Obtenir De L’aide</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Livraison</a></li>
+                    <li><a href="#">Retourne</a></li>
+                    <li><a href="#">État De La Commande</a></li>
+                    <li><a href="#">Options De Paiement</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Boutique En Ligne</h4>
+                <ul>
+                    <li><a href="#">Montre</a></li>
+                    <li><a href="#">Telephone</a></li>
+                    <li><a href="#">Ordinateur</a></li>
+                    <li><a href="#">Casque </a></li>
+                    <li><a href="#">console de jeux</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Suivez-Nous</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/"><i class='bx bxl-facebook'></i></i></a>
+                    <a href="https://www.instagram.com/"><i class='bx bxl-instagram'></i></i></a>
+                    <a href="https://twitter.com/senmultitech"><i class='bx bxl-twitter'></i></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+</body>
+<script src="index.js"></script>
+</html>
